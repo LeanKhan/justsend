@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <title>💬🟢 Text yourself</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
+    <link rel="stylesheet" href="/style.css" />
+
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-  </head>  
+  </head>
   <body>
-      <h4>
-        Text yourself on whatsapp :)
+    <h4>
+      Text yourself on whatsapp :)
     </h4>
-    
-      <input id="number" placeholder="234805678912">
-      <p>
-        enter your whatsapp number in international format
-      </p>
-    
-      <button onclick="generateLink()">
-        Generate link
-      </button>
-    
+
+    <input id="number" placeholder="234805678912" />
+    <p>
+      enter your whatsapp number in international format
+    </p>
+
+    <button onclick="generateLink()">
+      Generate link
+    </button>
+
     <a id="link" disabled></a>
-    
+
     <script>
       let number = document.getElementById("number");
       let button = document.querySelector("button");
-      let link = document.getElementById("link")
-      
+      let link = document.getElementById("link");
+
       function generateLink() {
-                link.setAttribute("href", number.value);
-        
+        if (number.value == "") {
+          window.alert("Enter a phone number mehn");
+        }
+        link.setAttribute("href", `https://wa.me/${number.value}?text=I%20got%20this%20from%20https%3A%2F%2Fencouraging-scarce-timpani.glitch.me%2F`);
+        link.setAttribute("target", "_blank");
+
         link.innerText = "Text yourself";
       }
     </script>
