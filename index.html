@@ -13,11 +13,32 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1>Hi there!</h1>
+      <h4>
+        Text yourself on whatsapp :)
+    </h4>
     
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+      <input id="number" placeholder="234805678912">
+      <p>
+        enter your whatsapp number in international format
+      </p>
+    
+      <button onclick="generateLink()">
+        Generate link
+      </button>
+    
+    <a id="link" disabled></a>
+    
+    <script>
+      let number = document.getElementById("number");
+      let button = document.querySelector("button");
+      let link = document.getElementById("link")
+      
+      function generateLink() {
+                link.setAttribute("href", number.value);
+        
+        link.innerText = "Text yourself";
+      }
+    </script>
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
