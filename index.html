@@ -39,16 +39,20 @@
       let link = document.getElementById("link");
 
       function generateLink() {
-        if (number.value == "") {
+        if (number.value == "" || !RegEx(\^((080)|(081)|(070)|(090))\d{8,9}\b)\).test(number) {
           window.alert("Enter a phone number mehn");
         }
         
         const num = number.value.toString().replace('0', '234');
         
-        link.setAttribute("href", `https://wa.me/${num}?text=hi`);
-        link.setAttribute("target", "_blank");
+        // link.setAttribute("href", `https://wa.me/${num}?text=hi`);
+        // link.setAttribute("target", "_blank");
+        
+        const link = `https://wa.me/${num}?text=hi`;
+        
+        window.href = link;
 
-        link.innerText = "Text yourself";
+        // link.innerText = "Text yourself";
       }
     </script>
 
