@@ -1,11 +1,36 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: 'Lora', serif;
-  margin: 2em;
+  font-family: helvetica, arial, sans-serif;
+  margin: 1.6em;
 }
 
 h1 {
   font-style: italic;
   color: #373fff;
+}
+
+button {
+  background-color: #44d362;
+  border-color: #44D362;
+}
+
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+input:not([type]):focus,
+textarea:focus,
+select:focus {
+  border-color: #44d362;
+  outline: 0;
 }

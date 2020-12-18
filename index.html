@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   
 
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -18,8 +19,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
     />
- <!-- import the webpage's stylesheet -->
+    
+    
+    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
+
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>
@@ -35,7 +39,7 @@
       </p>
 
       <label for="number">Number</label>
-      <input id="number" name="number" placeholder="0801234567" />
+      <input id="number" name="number" placeholder="0801234567" onkeypress="enter()"/>
       <p>
         <small>Use Nigerian numbers, sorry :/</small>
       </p>
@@ -47,7 +51,7 @@
       <a id="link" disabled></a>
 
       <p style="text-align:center;color:gray;font-size:12px;margin-top:100px;">
-        by leankhan
+        leankhan
       </p>
     </div>
 
@@ -55,6 +59,12 @@
       let number = document.getElementById("number");
       let button = document.querySelector("button");
       let link = document.getElementById("link");
+      
+      function enter() {
+        if(event.keyCode === 13) {
+        generateLink()   
+    }
+      }
 
       function generateLink() {
         if (
