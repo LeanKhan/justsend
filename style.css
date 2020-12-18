@@ -43,6 +43,6 @@ select:focus {
 }
 
 .title {
-  font-family: 'Arvo', sans-serif;
+  font-family: 'Arvo', sans-serif !important;
 /*   color: #cb6ce6 */
 }
