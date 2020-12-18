@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>💬 noneedsave | Text anyone without saving their number</title>
+    <title>💬 justsend | Text anyone without saving their number</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,13 +16,17 @@
     <h4>
      💬 Text anyone without saving their number
     </h4>
-
-    <label for="number">Number</label>
-    <input id="number" name="number" placeholder="0801234567" />
+    
     <p>
       paste the number you copied, should be like '0801234567'
     </p>
 
+    <label for="number">Number</label>
+    <input id="number" name="number" placeholder="0801234567" />
+    <p>      
+      Works only with Nigerian numbers sorry :)
+    </p>
+    
     <button onclick="generateLink()">
       Send Message
     </button>
@@ -39,18 +43,20 @@
       let link = document.getElementById("link");
 
       function generateLink() {
-        if (number.value == "" || !RegEx(\^((080)|(081)|(070)|(090))\d{8,9}\b)\).test(number) {
-          window.alert("Enter a phone number mehn");
+        if (number.value == "" || !/^((080)|(081)|(070)|(090))\d{8,9}\b$/g.test(number.value.toString())) {
+          return window.alert("Enter a phone number mehn");
         }
         
-        const num = number.value.toString().replace('0', '234');
+        let num = number.value.toString().replace('0', '234');
         
         // link.setAttribute("href", `https://wa.me/${num}?text=hi`);
         // link.setAttribute("target", "_blank");
         
-        const link = `https://wa.me/${num}?text=hi`;
+        let _url = `https://wa.me/${num}?text=hi`;
         
-        window.href = link;
+        console.log(_url)
+        
+        window.location = _url;
 
         // link.innerText = "Text yourself";
       }
