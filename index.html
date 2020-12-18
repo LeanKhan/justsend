@@ -6,36 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+   
 
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+ <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <h4>
-     💬 Text anyone without saving their number
-    </h4>
     
-    <p>
-      paste the number you copied, should be like '0801234567'
-    </p>
+    <div class="container">
+      <h4>
+        💬 Text anyone without saving their number
+      </h4>
 
-    <label for="number">Number</label>
-    <input id="number" name="number" placeholder="0801234567" />
-    <p>      
-      Works only with Nigerian numbers sorry :)
-    </p>
-    
-    <button onclick="generateLink()">
-      Send Message
-    </button>
+      <p>
+        paste the number you copied, should be like '0801234567'
+      </p>
 
-    <a id="link" disabled></a>
-    
-    <p style="text-align:center;color:gray;font-size:12px;margin-top:100px;">
-      by leankhan
-    </p>
+      <label for="number">Number</label>
+      <input id="number" name="number" placeholder="0801234567" />
+      <p>
+        <small>Use Nigerian numbers, sorry :/</small>
+      </p>
+
+      <button onclick="generateLink()">
+        Send Message
+      </button>
+
+      <a id="link" disabled></a>
+
+      <p style="text-align:center;color:gray;font-size:12px;margin-top:100px;">
+        by leankhan
+      </p>
+    </div>
 
     <script>
       let number = document.getElementById("number");
@@ -43,19 +57,22 @@
       let link = document.getElementById("link");
 
       function generateLink() {
-        if (number.value == "" || !/^((080)|(081)|(070)|(090))\d{8,9}\b$/g.test(number.value.toString())) {
-          return window.alert("Enter a phone number mehn");
+        if (
+          number.value == "" ||
+          !/^((080)|(081)|(070)|(090))\d{8,9}\b$/g.test(number.value.toString())
+        ) {
+          return window.alert(
+            "Enter a correct phone number plis\n like 0801234567"
+          );
         }
-        
-        let num = number.value.toString().replace('0', '234');
-        
+
+        let num = number.value.toString().replace("0", "234");
+
         // link.setAttribute("href", `https://wa.me/${num}?text=hi`);
         // link.setAttribute("target", "_blank");
-        
+
         let _url = `https://wa.me/${num}?text=hi`;
-        
-        console.log(_url)
-        
+
         window.location = _url;
 
         // link.innerText = "Text yourself";
