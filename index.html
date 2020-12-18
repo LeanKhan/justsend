@@ -17,13 +17,14 @@
      💬 Text anyone without saving their number
     </h4>
 
-    <input id="number" placeholder="234801234567" />
+    <label for="number">Number</label>
+    <input id="number" name="number" placeholder="0801234567" />
     <p>
-      type the whatsapp number like 234801234567
+      paste the number you copied, should be like '0801234567'
     </p>
 
     <button onclick="generateLink()">
-      Generate link
+      Send Message
     </button>
 
     <a id="link" disabled></a>
@@ -41,7 +42,10 @@
         if (number.value == "") {
           window.alert("Enter a phone number mehn");
         }
-        link.setAttribute("href", `https://wa.me/${number.value}?text=I%20got%20this%20from%20https%3A%2F%2Fencouraging-scarce-timpani.glitch.me%2F`);
+        
+        const num = number.value.toString().replace('0', '234');
+        
+        link.setAttribute("href", `https://wa.me/${num}?text=hi`);
         link.setAttribute("target", "_blank");
 
         link.innerText = "Text yourself";
