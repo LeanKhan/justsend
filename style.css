@@ -34,3 +34,10 @@ select:focus {
   border-color: #44d362;
   outline: 0;
 }
+
+.link {
+    color: grey !important;
+    text-decoration: dotted !important;
+    text-decoration-line: underline !important;
+    text-decoration-color: inherit !important;
+}
