@@ -41,3 +41,8 @@ select:focus {
     text-decoration-line: underline !important;
     text-decoration-color: inherit !important;
 }
+
+.title {
+  font-family: 'Arvo', sans-serif;
+  color: #cb6ce6
+}
