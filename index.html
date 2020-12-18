@@ -6,20 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!--   favicon   -->
-     <link
-          id="favicon"
-          rel="icon"
-          href="https://i.ibb.co/3sL6wQn/favicon-32x32.png"
-          type="image/x-icon"
-        />
+    <meta
+      name="title"
+      content="💬 justsend | text anyone without saving their number"
+    />
+    <meta
+      name="description"
+      content="text anyone on whatsapp without saving their number"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta
+      property="og:title"
+      content="💬 justsend | text anyone without saving their number"
+    />
+    <meta
+      property="og:description"
+      content="text anyone on whatsapp without saving their number"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta
+      property="twitter:title"
+      content="💬 justsend | text anyone without saving their number"
+    />
+    <meta
+      property="twitter:description"
+      content="text anyone on whatsapp without saving their number"
+    />
+
+    <!--   favicon   -->
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://i.ibb.co/3sL6wQn/favicon-32x32.png"
+      type="image/x-icon"
+    />
 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -28,8 +64,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
     />
-    
-    
+
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
@@ -37,13 +72,17 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    
     <div class="container">
       <h2 class="title">
-        💬 justsend
+        <img
+          src="https://i.ibb.co/3sL6wQn/favicon-32x32.png"
+          alt="favicon-32x32"
+          border="0"
+        />
+        justsend
       </h2>
       <h5>
-        <img src="https://i.ibb.co/3sL6wQn/favicon-32x32.png" alt="favicon-32x32" border="0"> Text anyone on Whasapp without saving their number
+        Text anyone on Whasapp without saving their number
       </h5>
 
       <p>
@@ -51,7 +90,12 @@
       </p>
 
       <label for="number">Number</label>
-      <input id="number" name="number" placeholder="0801234567" onkeypress="enter()"/>
+      <input
+        id="number"
+        name="number"
+        placeholder="0801234567"
+        onkeypress="enter()"
+      />
       <p>
         <small>Use Nigerian numbers :)</small>
       </p>
@@ -63,20 +107,24 @@
       <a id="link" disabled></a>
 
       <p style="text-align:center;color:gray;font-size:12px;margin-top:100px;">
-        <a href="https://glitch.com/edit/#!/encouraging-scarce-timpanisapp-text-" class="link" target="_blank">tha otha room</a>
+        <a
+          href="https://glitch.com/edit/#!/encouraging-scarce-timpanisapp-text-"
+          class="link"
+          target="_blank"
+          >tha otha room</a
+        >
       </p>
-      
     </div>
 
     <script>
       let number = document.getElementById("number");
       let button = document.querySelector("button");
       let link = document.getElementById("link");
-      
+
       function enter() {
-        if(event.keyCode === 13) {
-        generateLink()   
-    }
+        if (event.keyCode === 13) {
+          generateLink();
+        }
       }
 
       function generateLink() {
@@ -104,7 +152,7 @@
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-<!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
     <script src="https://button.glitch.me/button.js"></script> -->
   </body>
 </html>
